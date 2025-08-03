@@ -87,45 +87,7 @@ Reference the Caldera training plugin for a step-by-step tutorial on how to
 deploy an agent and run abilities via an operation.
 ```
 
-### Sources and Facts
-
-#### Discovery
-|Facts|[GEMS - Ping](#gems---ping)|
-|:--|:--:|
-|gems.device.psm     | X |
-|gems.device.addr    | X |
-|gems.device.user    | X |
-|gems.device.password| X |
-|gems.config.name    |   |
-|gems.parameter.names|   |
-|gems.parameter.value|   |
-|gems.directive.name |   |
-
-#### Collection Abilities
-|Facts|[GEMS - Get Configuration List](#gems---get-configuration-list)|[GEMS - Get Parameter](#gems---get-parameter)|[GEMS - Get All Parameters](#gems---get-all-parameters)|
-|:--|:--:|:--:|:--:|
-|gems.device.psm     | X | X | X | 
-|gems.device.addr    | X | X | X | 
-|gems.device.user    | X | X | X | 
-|gems.device.password| X | X | X | 
-|gems.config.name    |   |   |   |
-|gems.parameter.names|   | X |   | 
-|gems.parameter.value|   |   |   |
-|gems.directive.name |   |   |   |
-
-#### Impair-Process-Control Abilities
-|Facts|[GEMS - Set Parameter](#gems---set-parameter)|[GEMS - Save Configuration](#gems---save-configuration)|[GEMS - Load Configuration](#gems---load-configuration)|[GEMS - Send Directive](#gems---send-directive)|[GEMS - Send Directive with Arguments](#gems---send-directive-with-arguments)|
-|:--|:--:|:--:|:--:|:--:|:--:|
-|gems.device.psm     | X | X | X | X | X |
-|gems.device.addr    | X | X | X | X | X |
-|gems.device.user    | X | X | X | X | X |
-|gems.device.password| X | X | X | X | X |
-|gems.config.name    |   | X | X |   |   |
-|gems.parameter.names|   |   |   |   |   |
-|gems.parameter.value| X |   |   |   | X |
-|gems.directive.name |   |   |   | X | X |
-
-#### Sample Fact Source YAML File
+### Sample Fact Source YAML File
 The plugin includes a sample fact source (also copied below) to demonstrate how to save information about your environment to use as arguments to abilities.
 
 ```yaml
