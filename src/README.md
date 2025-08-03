@@ -19,7 +19,7 @@ A Makefile is provided to build the payloads for the following architectures:
 To build for additional architectures, update the Makefile or call `go build`
 directly.
 
-## Go Server
+## Virtual GEMS Server
 
 The code in `cmd/server` provides a simple GEMS server (or GEMS virtual device)
 that can be used to serve as a target for testing the GEMS Caldera plugin or the 
