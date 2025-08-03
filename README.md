@@ -2,8 +2,7 @@
 
 A [MITRE Caldera™ for OT](https://github.com/mitre/caldera-ot) plugin
 supplying [Caldera](https://github.com/mitre/caldera) with Ground Equipment
-Monitoring Service (GEMS) Protocol TTPs mapped to MITRE ATT&CK® for ICS
-[v14](https://attack.mitre.org/resources/updates/updates-october-2023/). This
+Monitoring Service (GEMS) Protocol TTPs mapped to [MITRE ATT&CK® for ICS](https://attack.mitre.org/matrices/ics/). This
 is part of a series of plugins that provide added threat emulation capability
 for Operational Technology (OT) environments. 
 
