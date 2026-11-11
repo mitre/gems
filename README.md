@@ -1,7 +1,7 @@
 # MITRE Caldera™ for OT plugin: GEMS
 
 A [MITRE Caldera™ for OT](https://github.com/mitre/caldera-ot) plugin
-supplying [Caldera](https://github.com/mitre/caldera) with Ground Equipment
+supplying [Apache Caldera](https://github.com/apache/caldera) with Ground Equipment
 Monitoring Service (GEMS) Protocol TTPs mapped to [MITRE ATT&CK® for ICS](https://attack.mitre.org/matrices/ics/). This
 is part of a series of plugins that provide added threat emulation capability
 for Operational Technology (OT) environments. 
@@ -12,7 +12,7 @@ fieldmanual, once the Caldera server is running.
 ## Installation
 
 To run Caldera along with the GEMS plugin:
-1. Download Caldera as detailed in the [Installation Guide](https://github.com/mitre/caldera)
+1. Download Apache Caldera as detailed in the [Installation Guide](https://github.com/apache/caldera)
 2. Install the GEMS plugin in Caldera's plugin directory: `caldera/plugins`
 3. Enable the GEMS plugin by adding `- gems` to the list of enabled plugins in
    `conf/local.yml` or `conf/default.yml` (if running Caldera in insecure mode)
