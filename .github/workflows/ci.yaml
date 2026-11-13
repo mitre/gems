@@ -1,0 +1,59 @@
+name: Build Payloads
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'src/**'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  build:
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Set up Go
+        uses: actions/setup-go@v5
+        with:
+          go-version: "1.22.5"
+
+      - name: Build payloads
+        env:
+          CGO_ENABLED: "0"
+        run: make -C src build/client
+
+      - name: Upload payloads
+        uses: actions/upload-artifact@v4
+        with:
+          name: payload-gems
+          path: src/cmd/client/bin/
+          retention-days: 1
+
+  create-pr:
+    needs: [build]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Download payloads
+        uses: actions/download-artifact@v4
+        with:
+          pattern: payload-*
+          merge-multiple: true
+          path: payloads/
+
+      - name: Create PR
+        uses: peter-evans/create-pull-request@v6
+        with:
+          base: main
+          branch: ci/update-payloads
+          title: Update payloads
+          commit-message: 'chore: update payloads'
+          body: Automated update of payloads.
+          add-paths: payloads
+          delete-branch: true
