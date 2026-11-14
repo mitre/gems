@@ -2,7 +2,7 @@
 The Ground Equipment Monitoring Service (GEMS) plugin for Caldera provides
 adversary emulation abilities specific to the OMG-GEMS communication protocol.
 
-v1.0.0 released 6 Aug 2025
+v1.0.0 released 13 Nov 2026
 
 ## Overview
 The GEMS plugin provides __9__ abilities specific to the GEMS protocol.
